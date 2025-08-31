@@ -17,13 +17,13 @@ status:
   icon: ♉
 
 # Is this the primary user of the site?
-superuser: true2
+superuser: true
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
