@@ -50,9 +50,9 @@ profiles:
     url: https://orcid.org/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Education
+  - Videogames
+  - Listen music
 
 education:
   - area: PhD Artificial Intelligence
