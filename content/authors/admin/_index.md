@@ -1,23 +1,23 @@
 ---
 # Display name
-title: 吳健雄
+title: Artem
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Artem Steshenko
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Artem
+last_name: Steshenko
 
 # Pronouns (optional)
-pronouns: she/her
+pronouns: he/his
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: ♉
 
 # Is this the primary user of the site?
-superuser: true
+superuser: true2
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
