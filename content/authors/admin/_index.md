@@ -10,7 +10,7 @@ first_name: Artem
 last_name: Steshenko
 
 # Pronouns (optional)
-pronouns: he/his
+pronouns: he
 
 # Status emoji
 status:
