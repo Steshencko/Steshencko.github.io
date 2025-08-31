@@ -1,138 +1,68 @@
 ---
-title: 🧠 Sharpen your thinking with a second brain
+title: Git version control.
 summary: Create a personal knowledge base and share your knowledge with your peers.
-date: 2023-10-26
+date: 2025-09-01
 authors:
   - admin
 tags:
-  - Second Brain
+  - Git
   - Markdown
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
 
-Create a personal knowledge base and share your knowledge with your peers.
+# 🧩 Управление версиями: почему без Git сегодня никуда?
 
-Hugo Blox web framework empowers you with one of the most flexible note-taking capabilities out there.
+Представьте, что вы пишете дипломную работу или сложный код. Вы сохраняете файл `project_final.doc`. Потом вносите правки — `project_final_2.doc`. Добавляете главу — `project_final_2_new.doc`. Запутались? Именно от этого хаоса нас спасает система контроля версий, и ее король — **Git**.
 
-Create a powerful knowledge base that works on top of a local folder of plain text Markdown files.
+---
 
-Use it as your second brain, either publicly sharing your knowledge with your peers via your website, or via a private GitHub repository and password-protected site just for yourself.
+## ❓ Что такое Git?
 
-## Mindmaps
+**Git** — это распределенная система контроля версий (VCS). Если просто, это мощный инструмент, который:
+*   **Запоминает** состояние ваших файлов в момент времени (сохраняет "снимок").
+*   **Позволяет** вернуться к любой предыдущей версии, как к сохранению в игре.
+*   **Помогает** нескольким людям работать над одним проектом, не мешая друг другу.
 
-Hugo Blox supports a Markdown extension for mindmaps.
+Это не то же самое, что GitHub или GitLab! **Git** — это инструмент, который работает у вас на компьютере. **GitHub/GitLab** — это веб-сервисы для хранения репозиториев и командной работы.
 
-With this open format, can even edit your mindmaps in other popular tools such as Obsidian.
+---
 
-Simply insert a Markdown code block labelled as `markmap` and optionally set the height of the mindmap as shown in the example below.
+## 🧠 Ключевые концепции, которые стоит знать
 
-Mindmaps can be created by simply writing the items as a Markdown list within the `markmap` code block, indenting each item to create as many sub-levels as you need:
+### 1. Репозиторий (Repository)
+Это ваш проект вместе со всей его историей изменений, которую запомнил Git. Он может быть локальным (на вашем компьютере) и удаленным (на сервере вроде GitHub).
 
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap {height="200px"}
-- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
-```
-</code>
-</pre>
-</div>
+### 2. Коммит (Commit)
+Это и есть тот самый "снимок" состояния ваших файлов. Коммит имеет уникальный ID, автора, дату и комментарий, который объясняет, что было изменено и зачем.
 
-renders as
+### 3. Ветка (Branch)
+Основная идея Git! Вы можете создать "ветку" от основного проекта (например, `main` или `master`) и экспериментировать в изоляции. Сделали новую фичу и она работает? — Объединяете ветки (**мерж**, `merge`). Не сработало? — Просто удаляете ветку, не задевая основной код.
 
-```markmap {height="200px"}
-- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
-```
+### 4. Pull Request / Merge Request
+Это механизм в платформах вроде GitHub для предложения изменений. Вы говорите: "Эй, коллеги, я сделал крутую штуку в своей ветке, давайте добавим это в главный проект!". Происходит обсуждение, проверка кода и только потом мерж.
 
-Anh here's a more advanced mindmap with formatting, code blocks, and math:
+---
 
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap
-- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-</code>
-</pre>
-</div>
+## 🚀 Базовые команды, которые пригодятся каждому
 
-renders as
+Вот минимальный набор, чтобы начать:
 
-```markmap
-- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
+```bash
+# Инициализировать новый репозиторий в текущей папке
+git init
 
-## Highlighting
+# Клонировать (скачать) удаленный репозиторий с GitHub
+git clone <url-репозитория>
 
-<mark>Highlight</mark> important text with `mark`:
+# Добавить файлы в "зону подготовки" для следующего коммита
+git add <имя_файла> или git add . (все файлы)
 
-```html
-<mark>Highlighted text</mark>
-```
+# Создать коммит с комментарием
+git commit -m "Ваше поясняющее сообщение"
 
-## Callouts
+# Отправить локальные коммиты на удаленный сервер (например, в GitHub)
+git push
 
-Use [callouts](https://docs.hugoblox.com/reference/markdown/#callouts) (aka _asides_, _hints_, or _alerts_) to draw attention to notes, tips, and warnings.
-
-By wrapping a paragraph in `{{%/* callout note */%}} ... {{%/* /callout */%}}`, it will render as an aside.
-
-```markdown
-{{%/* callout note */%}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{%/* /callout */%}}
-```
-
-renders as
-
-{{% callout note %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /callout %}}
-
-Or use the `warning` callout type so your readers don't miss critical details:
-
-{{% callout warning %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /callout %}}
-
-## Did you find this page helpful? Consider sharing it 🙌
+# Забрать обновления с удаленного сервера
+git pull
