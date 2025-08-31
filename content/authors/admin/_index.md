@@ -55,8 +55,8 @@ interests:
   - Listen music
 
 education:
-  - area: IT
-    institution: PFUR
+  - area: Computer information science
+    institution: RUDN University
     date_start: 2024-01-01
     date_end: 
     summary: |
@@ -165,4 +165,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Im an ordinary student. Thats all what i can say...
