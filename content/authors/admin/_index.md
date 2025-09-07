@@ -1,4 +1,4 @@
----
+2---
 # Display name
 title: Artem
 
@@ -83,16 +83,12 @@ skills:
     items:
       - name: Python
         description: ''
-        percent: 80
+        percent: 50
         icon: code-bracket
-      - name: Data Science
+      - name: venditor
         description: ''
-        percent: 100
+        percent: 70
         icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -111,12 +107,10 @@ skills:
         icon: camera
 
 languages:
-  - name: English
+  - name: Russian
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: English
+    percent: 50
 
 # Awards.
 #   Add/remove as many awards below as you like.
