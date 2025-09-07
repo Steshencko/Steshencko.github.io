@@ -8,6 +8,7 @@ tags:
   - Markdown
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+---
 
 ## Что такое Markdown?
 
