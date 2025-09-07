@@ -12,146 +12,58 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
 
-Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.
+# 🧩 Управление версиями: почему без Git сегодня никуда?
 
-Use popular tools such as Plotly, Mermaid, and data frames.
+Представьте, что вы пишете дипломную работу или сложный код. Вы сохраняете файл `project_final.doc`. Потом вносите правки — `project_final_2.doc`. Добавляете главу — `project_final_2_new.doc`. Запутались? Именно от этого хаоса нас спасает система контроля версий, и ее король — **Git**.
 
-## Charts
+---
 
-Hugo Blox supports the popular [Plotly](https://plot.ly/) format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!
+## ❓ Что такое Git?
 
-Save your Plotly JSON in your page folder, for example `line-chart.json`, and then add the `{{</* chart data="line-chart" */>}}` shortcode where you would like the chart to appear.
+**Git** — это распределенная система контроля версий (VCS). Если просто, это мощный инструмент, который:
+*   **Запоминает** состояние ваших файлов в момент времени (сохраняет "снимок").
+*   **Позволяет** вернуться к любой предыдущей версии, как к сохранению в игре.
+*   **Помогает** нескольким людям работать над одним проектом, не мешая друг другу.
 
-Demo:
+Это не то же самое, что GitHub или GitLab! **Git** — это инструмент, который работает у вас на компьютере. **GitHub/GitLab** — это веб-сервисы для хранения репозиториев и командной работы.
 
-{{< chart data="line-chart" >}}
+---
 
-You might also find the [Plotly JSON Editor](http://plotly-json-editor.getforge.io/) useful.
+## 🧠 Ключевые концепции, которые стоит знать
 
-## Diagrams
+### 1. Репозиторий (Repository)
+Это ваш проект вместе со всей его историей изменений, которую запомнил Git. Он может быть локальным (на вашем компьютере) и удаленным (на сервере вроде GitHub).
 
-Hugo Blox supports the _Mermaid_ Markdown extension for diagrams.
+### 2. Коммит (Commit)
+Это и есть тот самый "снимок" состояния ваших файлов. Коммит имеет уникальный ID, автора, дату и комментарий, который объясняет, что было изменено и зачем.
 
-An example **flowchart**:
+### 3. Ветка (Branch)
+Основная идея Git! Вы можете создать "ветку" от основного проекта (например, `main` или `master`) и экспериментировать в изоляции. Сделали новую фичу и она работает? — Объединяете ветки (**мерж**, `merge`). Не сработало? — Просто удаляете ветку, не задевая основной код.
 
-    ```mermaid
-    graph TD
-    A[Hard] -->|Text| B(Round)
-    B --> C{Decision}
-    C -->|One| D[Result 1]
-    C -->|Two| E[Result 2]
-    ```
+### 4. Pull Request / Merge Request
+Это механизм в платформах вроде GitHub для предложения изменений. Вы говорите: "Эй, коллеги, я сделал крутую штуку в своей ветке, давайте добавим это в главный проект!". Происходит обсуждение, проверка кода и только потом мерж.
 
-renders as
+---
 
-```mermaid
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+## 🚀 Базовые команды, которые пригодятся каждому
 
-An example **sequence diagram**:
+Вот минимальный набор, чтобы начать:
 
-    ```mermaid
-    sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-    ```
+```bash
+# Инициализировать новый репозиторий в текущей папке
+git init
 
-renders as
+# Клонировать (скачать) удаленный репозиторий с GitHub
+git clone <url-репозитория>
 
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
+# Добавить файлы в "зону подготовки" для следующего коммита
+git add <имя_файла> или git add . (все файлы)
 
-An example **class diagram**:
+# Создать коммит с комментарием
+git commit -m "Ваше поясняющее сообщение"
 
-    ```mermaid
-    classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
-    ```
+# Отправить локальные коммиты на удаленный сервер (например, в GitHub)
+git push
 
-renders as
-
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-An example **state diagram**:
-
-    ```mermaid
-    stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-    ```
-
-renders as
-
-```mermaid
-stateDiagram
-[*] --> Still
-Still --> [*]
-Still --> Moving
-Moving --> Still
-Moving --> Crash
-Crash --> [*]
-```
-
-## Data Frames
-
-Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
-
-```go
-{{</* table path="results.csv" header="true" caption="Table 1: My results" */>}}
-```
-
-renders as
-
-{{< table path="results.csv" header="true" caption="Table 1: My results" >}}
-
-## Did you find this page helpful? Consider sharing it 🙌
+# Забрать обновления с удаленного сервера
+git pull
