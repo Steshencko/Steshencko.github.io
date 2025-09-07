@@ -66,28 +66,15 @@ education:
       url: 'https://example.com'
 
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: Bartender
+    company_name: restaurant Mammino
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
-    summary: |2-
+    date_start: 2025-08-01
+    date_end: 2025-09-01
+    summary: |2-2
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - I work preparing drinks
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
