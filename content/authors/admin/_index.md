@@ -71,8 +71,8 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2025-08-01
-    date_end: ''
-    summary: |2-2
+    date_end: 2025-09-01
+    summary: |
       Responsibilities include:
       - I work preparing drinks
 
